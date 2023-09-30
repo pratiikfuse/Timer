@@ -2,7 +2,6 @@
 
 const setTimerButton = document.getElementById("set-timer");
 const timerContainer = document.getElementById("timers-container");
-let audio = new Audio("./alarm.mp3");
 
 let timerCount = 0;
 
@@ -66,7 +65,7 @@ function createTimer(hours, minutes, seconds) {
   }
 
   // l;m
-
+  let audio = new Audio("./alarm.mp3");
   let timeOutid = setInterval(() => {
     if (seconds == 0 && minutes == 0 && hours != 0) {
       hours--;
@@ -89,6 +88,7 @@ function createTimer(hours, minutes, seconds) {
       div.classList.remove("timer-div");
       div.className = "timer-stop";
 
+      audio.currentTime = 0;
       audio.play();
       clearInterval(timeOutid);
     }
@@ -106,6 +106,7 @@ function createTimer(hours, minutes, seconds) {
   deleteButton.addEventListener("click", (e) => {
     clearInterval(timeOutid);
     audio.pause();
+
     let target = e.target.parentNode;
     target.remove();
     timerCount--;
@@ -114,7 +115,6 @@ function createTimer(hours, minutes, seconds) {
     }
   });
 }
-function stopTimer() {}
 
 function validateInputs(hours, minutes, seconds) {
   if (hours < 0 || minutes > 59 || minutes < 0 || seconds > 59 || seconds < 0) {
