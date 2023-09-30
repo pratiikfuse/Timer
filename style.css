@@ -1,0 +1,106 @@
+body{
+    background-color: #1D1D23;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    /* width: 100vw;
+    height: 100vh; */
+}
+*{
+    color:white;
+    margin: 0;
+    padding: 0;
+}
+.inputDiv{
+    background-color:rgba(52, 52, 74, 1);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+input{
+    background-color: rgba(52, 52, 74, 1);
+    border: none;
+    width: 35px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.buttons{
+    background-color:#F0F757;
+    padding: 8px;
+    padding-left:25px ;
+    padding-right: 25px;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    transition: 0.2s linear;
+}
+
+.buttons:active{
+    transform: scale(0.8);
+}
+
+#current-timers{
+    background-color:#39393E;
+    color: white;
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+#timers-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timer-div{
+    background-color:rgba(52, 52, 74, 1);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    width: 350px;
+    border-radius: 10px;
+}
+
+
+.timer-stop{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    background-color: #F0F757;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timer-stop >h2 {
+    color:rgba(52, 52, 74, 1);
+    
+}
+.timer-stop>button{
+    /* position: absolute;
+    top: 20%;
+    right: 10%; */
+    margin-right: -100px;
+    background-color:rgba(52, 52, 74, 1);
+    padding: 8px;
+    padding-left:25px ;
+    padding-right: 25px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
